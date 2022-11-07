@@ -23,6 +23,18 @@ class Ligne {
     }
 }
 
+/* class Total {
+    Double totalTicket = 0.0;
+
+    ArrayList<Ligne> lignes = new ArrayList<>();
+
+    public Total(Double total) {
+        this.totalTicket = Ligne ;
+    }
+
+} */
+
+
 class Ticket {
     String client = "";
     Double totalTicket = 0.0;
@@ -53,16 +65,6 @@ class Ticket {
     }
 }
 
-/* class Total {
-    Double totalTicket = 0.0;
-
-    ArrayList<Ligne> lignes = new ArrayList<>();
-
-    public Total(Double total) {
-        this.totalTicket = Ligne ;
-    }
-
-} */
 
 
 class TicketCaisse {
