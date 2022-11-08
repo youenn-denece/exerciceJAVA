@@ -14,6 +14,7 @@ class Animal {
         this. nom = nom;
     }
 
+    // Setter
     public void setNom(String nom) {
         this.nom = nom;
     }
@@ -26,7 +27,7 @@ class Animal {
     public void setPassion(String passion) {
         this.passion = passion;
     }
-
+    // Getter
     public String getNom() {
         return nom;
     }
@@ -41,7 +42,6 @@ class Animal {
     }
 
 }
-
 class Mammifere extends Animal {
 
     public Mammifere(String nom) {
@@ -49,8 +49,14 @@ class Mammifere extends Animal {
         this.espece = "mammifere";
     }
 } 
+class Oiseau extends Animal {
 
-class Poule extends Animal {
+    public Oiseau(String nom) {
+        super(nom);
+        this.espece = "mammifere";
+    }
+} 
+class Poule extends Oiseau {
 
     public Poule(String nom) {
         super(nom);
@@ -63,7 +69,6 @@ class Poule extends Animal {
         System.out.println(String.format("Je suis la poule %s, je me nourrie de %s, je suis un %s et j'aime %s", this.nom, this.nourriture, this.espece, this.passion));
     }
 }
-
 class Vache extends Mammifere {
 
     public Vache(String nom) {
@@ -77,8 +82,6 @@ class Vache extends Mammifere {
         System.out.println(String.format("Je suis la vache %s, je me nourrie d' %s, je suis un %s et j'aime %s", this.nom, this.nourriture, this.espece, this.passion));
     }
 }
-
-
 class Ane extends Mammifere {
 
     public Ane(String nom) {
@@ -92,9 +95,7 @@ class Ane extends Mammifere {
         System.out.println(String.format("Je suis l'âne %s, je me nourrie de %s, je suis un %s et j'aime %s", this.nom, this.nourriture, this.espece, this.passion));
     }
 }
-
 public class Ferme {
-
     public static void main(String[] args) {
 
         Poule p1 = new Poule("Pondeuse");
@@ -104,6 +105,5 @@ public class Ferme {
         p1.affiche();
         v1.affiche();
         a1.affiche();
-    }
-    
+    } 
 }
