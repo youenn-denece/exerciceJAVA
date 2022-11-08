@@ -5,7 +5,7 @@ class Ligne {
     Double prixUnitaire = 0.0;
     Double quantite = 0.0;
     Double prixTotal = 0.0;
-
+    
     static Integer nbrLigne = 0;
 
     public Ligne(String nom, Double pu, Double qte) {
@@ -74,6 +74,7 @@ class TicketCaisse {
         t2.addAchat(new Ligne("persil", 2.50, 1.0));
         t2.addAchat(new Ligne("essence", 1.878, 75.30));
         t2.affTicket();
+
         System.out.println(String.format("nombre de d'achat ce jour : %d", Ligne.nbrLigne));
         System.out.println(String.format("nombre de ticket : %d", Ticket.nbrTicket));
         System.out.println("Total journée =" );
