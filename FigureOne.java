@@ -10,6 +10,11 @@ class Point {
     public void affiche() {
         System.out.println(String.format("Point : (%d, %d)", this.x, this.y));
     }
+
+    public void move(int dx, int dy) {
+        this.x = dx;
+        this.y = dy;
+    }
 }
 
 class Cercle extends Point {
@@ -58,14 +63,13 @@ class Rectangle extends Point {
 
 
 public class FigureOne {
-
-    
     public static void main(String[] args) {
        
         Point p1 = new Point(5, 6);
         p1.affiche();
 
         Cercle c1 = new Cercle(11, 61, 45);
+        c1.move(20, 41);
         c1.affiche();
 
        Carre k1 = new Carre(18, -3, 15);
