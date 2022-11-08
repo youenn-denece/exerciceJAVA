@@ -17,6 +17,10 @@ class Ligne {
         nbrLigne++;
     }
 
+    public Double getTotalLigne() {
+        return prixTotal;
+    }
+
     public void affLigne() {
         System.out.println(String.format("%15s %8.2f %8.2f = %8.2f", this.libel, this.prixUnitaire, this.quantite, this.prixTotal));
        
@@ -37,16 +41,27 @@ class Ticket {
         nbrTicket++;
     }
 
+    private Double calculTotal() {
+
+        Double resultat = 0.0;
+        for (Ligne l : lignes) {
+            resultat += l.getTotalLigne();
+        }
+        return resultat;
+
+    }
+
     public void addAchat(Ligne l) {
         lignes.add(l);
     }
+
     public void affTicket() {
         System.out.println("==========================================================");
         System.out.println(String.format("client : %15s", this.client));
         for(Ligne l : lignes) {
             l.affLigne();
         }
-        System.out.println(String.format("nombre de ligne : %d", Ligne.nbrLigne));
+        System.out.println(String.format("Total : %8.2f", calculTotal()));
         System.out.println("==========================================================");
     }
 }
@@ -75,8 +90,13 @@ class TicketCaisse {
         t2.addAchat(new Ligne("essence", 1.878, 75.30));
         t2.affTicket();
 
+        Ticket t3 = new Ticket("kéké");
+        t3.addAchat(new Ligne("crayon", 1.32, 4.0));
+        t3.addAchat(new Ligne("pomme", 0.99, 8.0));
+        t3.addAchat(new Ligne("poire", 1.02, 10.0));
+        t3.affTicket();
+
         System.out.println(String.format("nombre de d'achat ce jour : %d", Ligne.nbrLigne));
         System.out.println(String.format("nombre de ticket : %d", Ticket.nbrTicket));
-        System.out.println("Total journée =" );
     }
 }
