@@ -43,7 +43,7 @@ class Animal {
 
 }
 class Mammifere extends Animal {
-    int patte = 4;
+    int patte;
 
     public Mammifere(String nom, int patte) {
         super(nom);
@@ -51,7 +51,7 @@ class Mammifere extends Animal {
     }
 } 
 class Oiseau extends Animal {
-    int aile = 2;
+    int aile;
 
     public Oiseau(String nom, int aile) {
         super(nom);
