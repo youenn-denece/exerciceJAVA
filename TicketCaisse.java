@@ -21,20 +21,8 @@ class Ligne {
         System.out.println(String.format("%15s %8.2f %8.2f = %8.2f", this.libel, this.prixUnitaire, this.quantite, this.prixTotal));
        
     }
+
 }
-
-/* class Total {
-    Double totalTicket = 0.0;
-
-    ArrayList<Ligne> lignes = new ArrayList<>();
-
-    public Total(Double total) {
-        this.totalTicket = Ligne ;
-    }
-
-} */
-
-
 class Ticket {
     String client = "";
     Double totalTicket = 0.0;
@@ -59,19 +47,14 @@ class Ticket {
             l.affLigne();
         }
         System.out.println(String.format("nombre de ligne : %d", Ligne.nbrLigne));
-        System.out.println("Total ticket =" );
-        //System.out.println(String.format("Prix Total : %d", CalculTotal.totalTicket));
         System.out.println("==========================================================");
     }
 }
-
-
 
 class TicketCaisse {
 
     static ArrayList<Ligne> lignes = new ArrayList<>();
     public static void main(String[] args) {
-        // totalTicket += lignes.prixTotal;
 
         Ticket t1 = new Ticket("toto");
         t1.addAchat(new Ligne("romarin", 7.52, 2.0));
@@ -94,6 +77,5 @@ class TicketCaisse {
         System.out.println(String.format("nombre de d'achat ce jour : %d", Ligne.nbrLigne));
         System.out.println(String.format("nombre de ticket : %d", Ticket.nbrTicket));
         System.out.println("Total journée =" );
-        // System.out.println(String.format("Prix Total : %d", CalculTotal.totalTicket));
     }
 }
