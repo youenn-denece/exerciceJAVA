@@ -1,111 +1,79 @@
+import java.util.ArrayList;
+class LaFerme {
+    ArrayList<Animal> animaux = new ArrayList<>();
+    public void ajoutAnimal(Animal animal) {
+        animaux.add(animal);
+    }
+    public void aTable() {
+        for (Animal animal : animaux) {
+            animal.manger();
+        }
+    }
+    public Animal appeler (String nom) {
+        for (Animal animal : animaux) {
+            if (animal.nom.equals(nom))
+                return animal;
+        }
+        return null;
+    }
+}
 class Animal {
     String nom;
-    String espece;
-    String nourriture;
-    String passion;
-
-    public Animal (String nom, String espece, String nourriture, String passion) {
-        this. nom = nom;
-        this.espece = espece;
-        this.nourriture = nourriture;
-        this.passion = passion;
-    }
     public Animal (String nom) {
         this. nom = nom;
     }
-
-    // Setter
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-    public void setEspece(String espece) {
-        this.espece = espece;
-    }
-    public void setNourriturte(String nourriture) {
-        this.nourriture = nourriture;
-    }
-    public void setPassion(String passion) {
-        this.passion = passion;
-    }
-    // Getter
-    public String getNom() {
-        return nom;
-    }
-    public String getEspece() {
-        return espece;
-    }
-    public String getNourriture() {
-        return nourriture;
-    }
-    public String getPassion() {
-        return passion;
-    }
-
+    public void manger() {}
 }
 class Mammifere extends Animal {
-    int patte;
-
-    public Mammifere(String nom, int patte) {
+    public Mammifere(String nom) {
         super(nom);
-        this.patte = patte;
+    }
+
+    public void manger() {
+        System.out.println(String.format("Je m'appelle %s, je suis un mammifère et je mange de l'herbe.", this.nom));
     }
 } 
 class Oiseau extends Animal {
-    int aile;
-
-    public Oiseau(String nom, int aile) {
+    public Oiseau(String nom) {
         super(nom);
-        this.aile = aile;
     }
-} 
-class Poule extends Oiseau {
-
-    public Poule(String nom, int aile) {
-        super(nom, aile);
-        this.nourriture = "graines";
-        this.espece = "ovipare"; 
-        this.passion = "vous reveiller à pas d'heure";
+    public void manger() {
+        System.out.println(String.format("Je m'appelle %s, je suis un oiseau et je mange des insectes.", this.nom));
     }
+}
 
-    public void affiche() {
-        System.out.println(String.format("Je suis la poule %s, je me nourrie de %s, je suis un %s, j'ai %s ailes et j'aime %s", this.nom, this.nourriture, this.espece,this.aile, this.passion));
+class Canard extends Oiseau {
+    int nbrAile;
+    public Canard(String nom, int aile) {
+        super(nom);
+        this.nbrAile = aile;
+    }
+    public void manger() {
+        System.out.println(String.format("Je m'appelle %s, je suis un canard, j'ai %s ailes et je mange de l'herbe.", this.nom, this.nbrAile));
     }
 }
 class Vache extends Mammifere {
-
+    int nbrPatte;
     public Vache(String nom, int patte) {
-        super(nom, patte);
-        this.nourriture = "herbes";
-        this.espece = "bovin"; 
-        this.passion = "brouter";
+        super(nom);
+        this.nbrPatte = patte;
     }
+    public void manger() {
+        System.out.println(String.format("Je m'appelle %s, je suis une vache, j'ai %s pattes et je mange de l'herbe.", this.nom, this.nbrPatte));
+    }
+} 
 
-    public void affiche() {
-        System.out.println(String.format("Je suis la vache %s, je me nourrie d' %s, je suis un %s, j'ai %s pattes et j'aime %s", this.nom, this.nourriture, this.espece, this.patte,  this.passion));
-    }
-}
-class Ane extends Mammifere {
-
-    public Ane(String nom, int patte) {
-        super(nom, patte);
-        this.nourriture = "foin";
-        this.espece = "ovidé"; 
-        this.passion = "courir";
-    }
-
-    public void affiche() {
-        System.out.println(String.format("Je suis l'âne %s, je me nourrie de %s, je suis un %s, j'ai %s pattes et j'aime %s", this.nom, this.nourriture, this.espece,this.patte, this.passion));
-    }
-}
 public class Ferme {
     public static void main(String[] args) {
 
-        Poule p1 = new Poule("Pondeuse", 2);
-        Vache v1 = new Vache("Pimprenelle", 4);
-        Ane a1 = new Ane("Tétu", 3);
+        LaFerme f1 = new LaFerme();
 
-        p1.affiche();
-        v1.affiche();
-        a1.affiche();
+        f1.ajoutAnimal(new Vache("Pimprenelle", 4));
+        f1.ajoutAnimal(new Mammifere("Coco"));
+
+        f1.ajoutAnimal(new Oiseau("Titi"));
+        f1.ajoutAnimal(new Canard("Donald",2));
+
+        f1.aTable();
     } 
 }
