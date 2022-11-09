@@ -7,7 +7,7 @@ public class Director extends Person {
     }
 
     public void sayHello() {
-        System.out.println(String.format("Bonjour, appeller moi %s." , this.name));
+        System.out.println(String.format("Bonjour, appellez moi %s." , this.name));
     }
     
 }

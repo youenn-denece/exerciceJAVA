@@ -7,7 +7,7 @@ import school.TheSchool.TheSchool;
 public class Student extends Person {
 
     String classroom;
-    Double note;
+    public Double note;
 
     public Student(String name, String classroom, Double note) {
         super(name);

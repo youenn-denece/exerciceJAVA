@@ -1,28 +1,43 @@
 package school.TheSchool;
 import java.util.ArrayList;
-
 import school.Persons.Person;
-import school.Persons.Student;
+
 public class TheSchool {
 
     ArrayList<Person> persons = new ArrayList<>();
-    ArrayList<Student> students = new ArrayList<>();
+    ArrayList<ClassRoom> classRooms = new ArrayList<>();
 
-    public TheSchool(ArrayList<Person> persons, ArrayList<Student> students) {
-        this.persons = persons;
-        this.students = students;
+    public void addPerson(Person person) {
+        persons.add(person);
+    }
+    
+    public void addClassRoom(ClassRoom classRoom) {
+        classRooms.add(classRoom);
     }
 
-    public Student getStudentByName(String name) {
-        for (Person person : this.getPersons()) {
-            if (person instanceof Student) {
-                if (name == ((Student) person).getName()) {
-                    return (Student) person;
-                }
-            }
+    public Person getStudentByName(String nameToBeFound) {
+        for (Person person : persons) {
+            if (person.name.equals(nameToBeFound)) 
+                    return person;
         }
         return null;
-}
+    }
+
+    public void sayHello() {
+        for (Person person : persons) {
+            person.sayHello();
+        }
+        for (ClassRoom classRoom : classRooms) {
+            classRoom.sayHello();
+        }
+    }
+
+    /* public void showStudents() {
+        for (ClassRoom classRoom : classRooms) {
+            classRoom.showStudents();
+        }
+    } */
+
 
     public ArrayList<Person> getPersons() {
         return persons;
@@ -32,25 +47,5 @@ public class TheSchool {
         this.persons = persons;
     }
 
-    public ArrayList<Student> getStudents() {
-        return students;
-    }
-
-    public void setStudents(ArrayList<Student> students) {
-        this.students = students;
-    }
-
-    public void addPerson(Person person) {
-        persons.add(person);
-    }
-
-    public void addStudent(Student student) {
-        students.add(student);
-    }
-
-    public void sayHello() {
-        for (Person person : persons) {
-           person.sayHello();
-        }
-    }
+    
 }
