@@ -7,7 +7,7 @@ public class Person {
     public Person(String name) {
         this.name = name;
     }
-    public void study() {
+    public void sayHello() {
         System.out.println(String.format("Bonjour, je m'appelle %s.", this.name));
     }
 
