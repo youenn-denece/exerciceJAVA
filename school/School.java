@@ -10,12 +10,14 @@ public class School {
 
         s1.addPerson(new Student("Toto", "CE2", 3.5));
         s1.addPerson(new Director("Mr Le Directeur"));
+        s1.addPerson(new Teacher("Madame Roy", "CE2",1999.9));
+        s1.addPerson(new ExtraStaff("Thomas",1320.2));
         s1.sayHello();
 
-        s1.getStudentByName("Toto").setNote(5.5);
+       /*  s1.getStudentByName("Toto").setNote(5.5);
         s1.sayHello();
 
         s1.getStudentByName("Toto").setName("Titi");
-        s1.sayHello();
+        s1.sayHello(); */
     }
 }

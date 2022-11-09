@@ -1,7 +1,5 @@
 package school;
-
 import java.util.ArrayList;
-
 public class TheSchool {
 
     ArrayList<Person> persons = new ArrayList<>();
