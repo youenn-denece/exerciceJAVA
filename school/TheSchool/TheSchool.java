@@ -1,5 +1,8 @@
-package school;
+package school.TheSchool;
 import java.util.ArrayList;
+
+import school.Persons.Person;
+import school.Persons.Student;
 public class TheSchool {
 
     ArrayList<Person> persons = new ArrayList<>();

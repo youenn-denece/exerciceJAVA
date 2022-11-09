@@ -1,6 +1,8 @@
-package school;
+package school.Persons;
 
 import java.util.ArrayList;
+
+import school.TheSchool.TheSchool;
 
 public class Student extends Person {
 

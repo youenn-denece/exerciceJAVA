@@ -2,6 +2,13 @@ package school;
 
 import java.util.ArrayList;
 
+import school.Persons.Director;
+import school.Persons.ExtraStaff;
+import school.Persons.Person;
+import school.Persons.Student;
+import school.Persons.Teacher;
+import school.TheSchool.TheSchool;
+
 public class School {
     
     public static void main(String[] args) {

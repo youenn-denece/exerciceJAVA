@@ -1,4 +1,4 @@
-package school;
+package school.Persons;
 
 public class ExtraStaff extends Staff{
 
