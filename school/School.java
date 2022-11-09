@@ -1,4 +1,5 @@
 package school;
+import school.Note.ManagerNote;
 import school.Note.Note;
 import school.Persons.Director;
 import school.Persons.ExtraStaff;
@@ -12,7 +13,8 @@ public class School {
     public static void main(String[] args) {
 
         TheSchool MaxJacob = new TheSchool();
-        
+        ClassRoom CE2 = new ClassRoom("CE2");
+        ManagerNote n1 = new ManagerNote( 17.5, "Français");
 
         MaxJacob.addPerson(new Director("Mr Le Directeur"));
         MaxJacob.addPerson(new Teacher("Madame Roy", "CE2",1999.9));
@@ -25,16 +27,16 @@ public class School {
         
         MaxJacob.addClassRoom(new ClassRoom("CE2"));
         MaxJacob.sayHello();
+        /*  MaxJacob.getStudentByName("Toto").setNote(5.5);
+        MaxJacob.sayHello();
+        MaxJacob.getStudentByName("Toto").setName("Titi");
+        MaxJacob.sayHello(); */
 
-        ClassRoom CE2 = new ClassRoom("CE2");
         CE2.addStudent(new Student("Toto", "CE2", 3.5));
         CE2.showStudents();
 
-        Note n1 = new Note(12.0, "Français");
-       /*  MaxJacob.getStudentByName("Toto").setNote(5.5);
-        MaxJacob.sayHello();
-
-        MaxJacob.getStudentByName("Toto").setName("Titi");
-        MaxJacob.sayHello(); */
+        // n1.addNote(new Note( 18.0, "Français"));
+        n1.showNote(); // TODO a résoudre
+       
     }
 }

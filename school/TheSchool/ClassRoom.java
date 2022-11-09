@@ -21,7 +21,7 @@ public class ClassRoom {
 
      public void showStudents() {
         for(Student student : students) {
-            System.out.println(String.format("L'éleve %s a pour note %2.2f", student.name, student.note));
+            System.out.println(String.format("L'éleve %s a pour note %2.2f/20 !", student.name, student.note));
         }
     }
 
