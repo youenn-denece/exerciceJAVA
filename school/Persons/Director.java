@@ -1,13 +1,13 @@
 package school.Persons;
 
-public class Director extends Person {
+public class Director extends Staff {
 
     public Director(String name) {
         super(name);
     }
 
-    public void sayHello() {
-        System.out.println(String.format("Bonjour, appellez moi %s." , this.name));
+    public Director(String name, Integer salary) {
+        super(name, salary);
     }
     
 }

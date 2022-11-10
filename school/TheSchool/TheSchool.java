@@ -1,6 +1,7 @@
 package school.TheSchool;
 import java.util.ArrayList;
 import school.Persons.Person;
+import school.Persons.Student;
 
 public class TheSchool {
 
@@ -23,29 +24,27 @@ public class TheSchool {
         return null;
     }
 
-    public void sayHello() {
-        for (Person person : persons) {
-            person.sayHello();
+    public ClassRoom getClassRoomByLevel(String levelToBeFound) {
+        for (ClassRoom classRoom : this.classRooms) {
+            if (classRoom.level.equals(levelToBeFound)) 
+                return classRoom;
         }
-        for (ClassRoom classRoom : classRooms) {
-            classRoom.sayHello();
-        }
+        return null;
     }
 
-    /* public void showStudents() {
-        for (ClassRoom classRoom : classRooms) {
-            classRoom.showStudents();
+    public ArrayList<Student> showStudent() {
+        ArrayList<Student> list = new ArrayList<>();
+
+        for (Person person : this.persons) {
+            if (person.getClass().getSimpleName().equals("Eleve")) {
+                list.add((Student) person);
+            }
         }
-    } */
-
-
-    public ArrayList<Person> getPersons() {
-        return persons;
+        return list;
     }
 
-    public void setPersons(ArrayList<Person> persons) {
-        this.persons = persons;
+    public ArrayList<ClassRoom> getClassRooms() {
+        return classRooms;
     }
-
     
 }

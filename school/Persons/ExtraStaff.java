@@ -3,13 +3,8 @@ package school.Persons;
 public class ExtraStaff extends Staff{
 
 
-    public ExtraStaff(String name, Double salary) {
+    public ExtraStaff(String name, Integer salary) {
         super(name, salary);
     }
-
-    public void sayHello() {
-        System.out.println(String.format("Bonjour, je suis %s, je suis le surveillant et mon salaire est de%8.2f $." , this.name, this.salary));
-
-    }
-
+    
 }

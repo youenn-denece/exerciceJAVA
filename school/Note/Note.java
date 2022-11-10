@@ -1,24 +1,20 @@
 package school.Note;
 
 public class Note {
-    Double note;
-    String matiere;
+    Integer note;
+    String subject;
 
     // static int nbrNote;
     
-    public Note(Double note, String matiere) {
+    public Note(Integer note, String subject) {
         this.note = note; 
-        this.matiere = matiere;
+        this.subject = subject;
 
         // nbrNote++;
     }
 
-    public void showNote() {
-        System.out.println(String.format("La dernière note est %2.2f/20 en %s.", this.note, this.matiere));
-        
-    }
-
-    public static void add(float p_note) {
-    }
-
+    @Override
+    public String toString() {
+        return  subject + ": " + note + "/20. ";
+    } 
 }

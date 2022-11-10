@@ -2,18 +2,26 @@ package school.Note;
 
 import java.util.ArrayList;
 
-public class ManagerNote extends Note {
+public class ManagerNote {
 
-    public ManagerNote(Double note, String matiere) {
-        super(note, matiere);
-    }
+    ArrayList<Note> notes = new ArrayList<>();
 
-    private ArrayList<Note> notes = new ArrayList<>();
+    public ManagerNote() {}
 
     public void addNote(Note n) {
         this.notes.add(n);
-    }    
+    }
 
+    public String toString()
+    {
+        String res = "";
+        for (Note n : this.notes) {
+            res += n;
+        }
+        return res ;
+    }
+
+    /* 
     public void allNote() {
         for(int i=0; i<this.notes.size(); i++) {
             Note n = this.notes.get(i);
@@ -23,10 +31,11 @@ public class ManagerNote extends Note {
             System.out.println(n);
         }
     }
-    
+
     public void showNotes() {
         for(Note note : notes) {
             System.out.println(String.format("La dernière note est %2.2f/20 .", note)); // TODO mauvais string format
         }
     }
+ */
 }
