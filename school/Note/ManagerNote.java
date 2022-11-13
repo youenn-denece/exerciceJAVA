@@ -14,11 +14,11 @@ public class ManagerNote {
 
     public String toString()
     {
-        String res = "";
+        String result = "";
         for (Note n : this.notes) {
-            res += n;
+            result += n;
         }
-        return res ;
+        return "[" + result + "]" ;
     }
 
     /* 

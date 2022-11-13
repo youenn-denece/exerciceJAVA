@@ -1,5 +1,7 @@
 package school.TheSchool;
 import java.util.ArrayList;
+
+import school.Devoir.Devoir;
 import school.Persons.Student;
 import school.Persons.Teacher;
 
@@ -16,6 +18,12 @@ public class ClassRoom {
 
     public void addStudent(Student student) {
         this.students.add(student);
+    }
+
+    public void addDevoir(Devoir devoir) {
+        for (Student student : this.students) {
+            student.addDevoir(new Devoir(devoir, student));
+        }
     }
 
     public void sayHello() {

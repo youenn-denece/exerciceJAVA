@@ -1,5 +1,6 @@
 package school;
-import java.util.ArrayList;
+
+import school.Devoir.Devoir;
 import school.Persons.Director;
 import school.Persons.ExtraStaff;
 import school.Persons.Student;
@@ -39,17 +40,21 @@ public class School {
         youenn.addNote("Maths", 18);
         youenn.addNote("Latin", 17);
         youenn.addNote("Informatique", 20);
+        youenn.addDevoir( new Devoir("Multiplication", "Mathématiques"));
+        System.out.println(youenn);
 
         Student romain = (Student)MaxJacob.getStudentByName("Romain");
         romain.addNote("EPS", 9);
         romain.addNote("Maths", 8);
         romain.addNote("Latin", 7);
         romain.addNote("Informatique", 2);
+        romain.addDevoir( new Devoir("Poésie", "Français"));
+        System.out.println(romain);
         
         System.out.println(  "==================================");
 
-        MaxJacob.getClassRoomByLevel("CE2").sayHello();
-        MaxJacob.getClassRoomByLevel("CM2").sayHello();
+       /*  MaxJacob.getClassRoomByLevel("CE2").sayHello();
+        MaxJacob.getClassRoomByLevel("CM2").sayHello(); */
 
         /* ArrayList<Student> students = MaxJacob.showStudent();
         for (Student student : students) {
