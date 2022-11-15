@@ -1,8 +1,6 @@
 package school.Devoir;
 
 import java.util.ArrayList;
-
-import school.Note.Note;
 import school.Persons.Student;
 
 

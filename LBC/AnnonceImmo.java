@@ -27,7 +27,7 @@ public class AnnonceImmo extends Annonce {
     public String toString()
     {
         String result = "";
-        result += "Annonce IMMO\n";
+        result += "Annonce IMMOBILIERE\n";
         result += super.toString(); 
         result += String.format( "Superficie : %s m2 \nNombre de pieces : %s", this.surface, this.nbrPiece) ;
         return result;
