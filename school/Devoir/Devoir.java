@@ -1,8 +1,7 @@
 package school.Devoir;
 
-import java.util.ArrayList;
+import java.util.*;
 import school.Persons.Student;
-
 
 public class Devoir {
 
@@ -10,7 +9,7 @@ public class Devoir {
     String subject = "";
     Student student = null;
 
-    public static ArrayList<Devoir> devoirs = new ArrayList();
+    public static ArrayList<Devoir> devoirs = new ArrayList<>();
 
     public Devoir(String title) {
         this.title = title;
@@ -42,6 +41,4 @@ public class Devoir {
             return "Devoir : Intitulé :" + title + ", Matière :" + this.subject ;
         return "Devoir : Intitulé :" + title + ", Matière :" + this.subject  + ", Elève : " + this.student.getName();
     }
-
-
 }
