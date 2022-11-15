@@ -1,6 +1,6 @@
 package tests;
 
-class Atester  {
+class Verif  {
 
     static public boolean isBisextile(int annee) {
         if (annee % 400 == 0) {
@@ -27,19 +27,19 @@ class Atester  {
 
     static public void testBisextile(int an, Boolean r) {
         System.out.print(an);
-        Atester.testBoolean( isBisextile(an), r);
+        Verif.testBoolean( isBisextile(an), r);
     }
 }
 
 public class bissextileTest {
     public static void main(String args[]) {
-        Atester.testBisextile( 1900, false );
-        Atester.testBisextile( 2068, true );
-        Atester.testBisextile( 2488, true );                                                                    
-        Atester.testBisextile( 2600, false );
-        Atester.testBisextile( 1983, false );
-        Atester.testBisextile( 1982, false );
-        Atester.testBisextile( 1981, false );
-        Atester.testBisextile( 2020, true );
+        Verif.testBisextile( 1900, false );
+        Verif.testBisextile( 2068, true );
+        Verif.testBisextile( 2488, true );                                                                    
+        Verif.testBisextile( 2600, false );
+        Verif.testBisextile( 1983, false );
+        Verif.testBisextile( 1982, false );
+        Verif.testBisextile( 1981, false );
+        Verif.testBisextile( 2020, true );
     }
 }

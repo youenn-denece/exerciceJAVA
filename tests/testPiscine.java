@@ -1,6 +1,6 @@
 package tests;
 
-class Atester {
+class Check {
     
     static public void testDoubleEq(Double a, Double b) {
         if (a!= null && b != null)
@@ -26,14 +26,14 @@ class Atester {
 }
 public class testPiscine {
     public static void main( String[] args ) {
-        Atester.testDoubleEq( Atester.tarif( 11 ) , 4.0 );
-        Atester.testDoubleEq( Atester.tarif( 12 ) , 5.5 );
-        Atester.testDoubleEq( Atester.tarif( 59 ) , 5.5 );
-        Atester.testDoubleEq( Atester.tarif( 60 ) , 4.5 );
-        Atester.testDoubleEq( Atester.tarif( 61 ) , 4.5 );
-        Atester.testDoubleEq( Atester.tarif( 4 ) , 0.0 );
-        Atester.testDoubleEq( Atester.tarif( 5 ) , 4.0 );
-        Atester.testDoubleEq( Atester.tarif( 6 ) , 4.0 );
+        Check.testDoubleEq( Check.tarif( 11 ) , 4.0 );
+        Check.testDoubleEq( Check.tarif( 12 ) , 5.5 );
+        Check.testDoubleEq( Check.tarif( 59 ) , 5.5 );
+        Check.testDoubleEq( Check.tarif( 60 ) , 4.5 );
+        Check.testDoubleEq( Check.tarif( 61 ) , 4.5 );
+        Check.testDoubleEq( Check.tarif( 4 ) , 0.0 );
+        Check.testDoubleEq( Check.tarif( 5 ) , 4.0 );
+        Check.testDoubleEq( Check.tarif( 6 ) , 4.0 );
     }
     
 }
