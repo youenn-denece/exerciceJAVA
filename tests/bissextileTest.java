@@ -1,6 +1,8 @@
 package tests;
 
-class Atester  {
+/* 
+
+class Atester {
 
     static public boolean isBisextile(int annee) {
         if (annee % 400 == 0) {
@@ -43,3 +45,4 @@ public class bissextileTest {
         Atester.testBisextile( 2020, true );
     }
 }
+ */

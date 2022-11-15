@@ -1,4 +1,4 @@
-package tests;
+/* package tests;
 
 class Atester {
     
@@ -37,3 +37,4 @@ public class testPiscine {
     }
     
 }
+ */
