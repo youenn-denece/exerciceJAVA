@@ -1,28 +1,38 @@
 package school.TheSchool;
 import java.util.ArrayList;
+
+import school.Devoir.Devoir;
 import school.Persons.Student;
+import school.Persons.Teacher;
 
 public class ClassRoom {
-    String name;
-    ArrayList<Student> students;
+    String level;
+    Teacher teacher;
+    
+    ArrayList<Student> students = new ArrayList<>();
 
-    public ClassRoom(String name) {
-        this.name = name;
-        students = new ArrayList<>();
+    public ClassRoom(String level, Teacher teacher) {
+        this.level = level;
+        this.teacher = teacher;
     }
 
     public void addStudent(Student student) {
         this.students.add(student);
     }
 
-    public void sayHello() {
-        System.out.println(String.format("Bienvenue dans la classe de %s.", this.name));
-    }
-
-     public void showStudents() {
-        for(Student student : students) {
-            System.out.println(String.format("L'éleve %s a pour note %2.2f/20 !", student.name, student.note));
+    public void addDevoir(Devoir devoir) {
+        for (Student student : this.students) {
+            student.addDevoir(new Devoir(devoir, student));
         }
     }
 
+    public void sayHello() {
+            System.out.println( String.format("Niveau : %s", this.level)  );
+            System.out.println( String.format("Instituteur : %s", this.teacher)  );
+            for (Student student : this.students ) {
+                System.out.println( String.format(" - %s", student)  );
+            }
+            System.out.println();
+    }
+    
 }

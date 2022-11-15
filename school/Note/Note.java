@@ -1,24 +1,27 @@
 package school.Note;
 
 public class Note {
-    Double note;
-    String matiere;
+    Integer note;
+    String subject;
+    String date = "11/11/2022";
 
     // static int nbrNote;
     
-    public Note(Double note, String matiere) {
+    public Note(Integer note, String subject) {
         this.note = note; 
-        this.matiere = matiere;
+        this.subject = subject;
 
         // nbrNote++;
     }
 
-    public void showNote() {
-        System.out.println(String.format("La dernière note est %2.2f/20 en %s.", this.note, this.matiere));
-        
+    public Note(Integer note, String subject, String date) {
+        this.note = note; 
+        this.subject = subject;
+        this.date = date;
     }
 
-    public static void add(float p_note) {
-    }
-
+    @Override
+    public String toString() {
+        return  subject + ": " + note + "/20 " + this.date + ".";
+    } 
 }
